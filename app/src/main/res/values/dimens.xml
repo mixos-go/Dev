@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Clean Watercolor Design Tokens - Spacing -->
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="space_xl">40dp</dimen>
+    
+    <!-- Border Radius -->
+    <dimen name="radius_xs">4dp</dimen>
+    <dimen name="radius_sm">8dp</dimen>
+    <dimen name="radius_md">16dp</dimen>
+    <dimen name="radius_lg">24dp</dimen>
+    <dimen name="radius_pill">999dp</dimen>
+    
+    <!-- Component Sizes -->
+    <dimen name="button_height">44dp</dimen>
+    <dimen name="button_padding_horizontal">20dp</dimen>
+    <dimen name="card_padding">24dp</dimen>
+    <dimen name="icon_size_sm">20dp</dimen>
+    <dimen name="icon_size_md">24dp</dimen>
+    <dimen name="icon_size_lg">32dp</dimen>
+    
+    <!-- Navigation -->
+    <dimen name="nav_height">64dp</dimen>
+    <dimen name="nav_icon_size">28dp</dimen>
+    <dimen name="nav_margin_bottom">24dp</dimen>
+    <dimen name="nav_margin_horizontal">40dp</dimen>
+    
+    <!-- Typography -->
+    <dimen name="font_h1">48sp</dimen>
+    <dimen name="font_h2">32sp</dimen>
+    <dimen name="font_h3">24sp</dimen>
+    <dimen name="font_body">16sp</dimen>
+    <dimen name="font_caption">12sp</dimen>
+    
+    <!-- Terminal -->
+    <dimen name="terminal_toolbar_height">37.5dp</dimen>
+    
+    <!-- Modal -->
+    <dimen name="modal_corner_radius">24dp</dimen>
+    <dimen name="modal_padding">24dp</dimen>
+</resources>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Overlay -->
+    <View
+        android:id="@+id/modal_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_dark" />
+
+    <!-- Modal Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_modal"
+            android:padding="@dimen/space_lg">
+
+            <!-- Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/settings_title"
+                    style="@style/TextStyle.H3" />
+
+                <ImageButton
+                    android:id="@+id/btn_close"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_close"
+                    android:tint="@color/text_secondary"
+                    android:background="@drawable/bg_nav_item"
+                    android:contentDescription="@string/close" />
+
+            </LinearLayout>
+
+            <!-- API Keys Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_lg"
+                android:text="@string/settings_api_keys"
+                style="@style/TextStyle.H4" />
+
+            <!-- Anthropic Key -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:text="@string/settings_anthropic_key"
+                style="@style/TextStyle.Caption" />
+            <EditText
+                android:id="@+id/input_anthropic_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:hint="sk-ant-..."
+                android:inputType="textPassword"
+                style="@style/InputStyle" />
+
+            <!-- HuggingFace Key -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:text="@string/settings_huggingface_key"
+                style="@style/TextStyle.Caption" />
+            <EditText
+                android:id="@+id/input_huggingface_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:hint="hf_..."
+                android:inputType="textPassword"
+                style="@style/InputStyle" />
+
+            <!-- Tavily Key -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:text="@string/settings_tavily_key"
+                style="@style/TextStyle.Caption" />
+            <EditText
+                android:id="@+id/input_tavily_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:hint="tvly-..."
+                android:inputType="textPassword"
+                style="@style/InputStyle" />
+
+            <!-- Ollama URL -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:text="@string/settings_ollama_url"
+                style="@style/TextStyle.Caption" />
+            <EditText
+                android:id="@+id/input_ollama_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:hint="http://localhost:11434"
+                android:inputType="textUri"
+                style="@style/InputStyle" />
+
+            <!-- Model Selection -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_lg"
+                android:text="@string/settings_model"
+                style="@style/TextStyle.H4" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:text="@string/settings_primary_model"
+                style="@style/TextStyle.Caption" />
+            <Spinner
+                android:id="@+id/spinner_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xs"
+                android:background="@drawable/bg_input"
+                android:padding="@dimen/space_md" />
+
+            <!-- Updates Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_lg"
+                android:text="@string/settings_updates"
+                style="@style/TextStyle.H4" />
+
+            <Button
+                android:id="@+id/btn_check_updates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:text="@string/settings_check_updates"
+                style="@style/ButtonStyle.Secondary" />
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_xl"
+                android:text="@string/settings_save"
+                style="@style/ButtonStyle.Primary" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

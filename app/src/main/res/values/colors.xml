@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Clean Watercolor Design Tokens -->
+    
+    <!-- Background Colors -->
+    <color name="bg_canvas">#F6F4F1</color>
+    <color name="bg_surface">#FFFFFF</color>
+    <color name="bg_soft">#EEEAE5</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#2E2E2E</color>
+    <color name="text_secondary">#6B6B6B</color>
+    <color name="text_muted">#9A9A9A</color>
+    
+    <!-- Accent Colors -->
+    <color name="accent_mauve">#7A6EAA</color>
+    <color name="accent_olive">#8A8C68</color>
+    <color name="accent_terracotta">#C47A5A</color>
+    <color name="accent_mint">#A7C4B8</color>
+    
+    <!-- State Colors -->
+    <color name="state_success">#7FAF9B</color>
+    <color name="state_warning">#E1B07E</color>
+    <color name="state_error">#D17C7C</color>
+    
+    <!-- Terminal Colors (keep original) -->
+    <color name="terminal_background">#000000</color>
+    <color name="terminal_foreground">#FFFFFF</color>
+    
+    <!-- Navigation Colors -->
+    <color name="nav_background">#FFFFFF</color>
+    <color name="nav_indicator">#7A6EAA</color>
+    <color name="nav_icon_active">#7A6EAA</color>
+    <color name="nav_icon_inactive">#9A9A9A</color>
+    
+    <!-- Card Colors -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_border">#EEEAE5</color>
+    
+    <!-- Overlay -->
+    <color name="overlay_dark">#40000000</color>
+    <color name="overlay_light">#40FFFFFF</color>
+    
+    <!-- Legacy colors for compatibility -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+</resources>

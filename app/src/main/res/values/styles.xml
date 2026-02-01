@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Clean Watercolor Main Theme -->
+    <style name="Theme.Termux" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/bg_canvas</item>
+        <item name="android:navigationBarColor">@color/bg_canvas</item>
+        <item name="android:colorPrimary">@color/accent_mauve</item>
+        <item name="android:colorAccent">@color/accent_mauve</item>
+        <item name="android:windowBackground">@color/bg_canvas</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:alertDialogTheme">@style/TermuxAlertDialogStyle</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+    </style>
+
+    <!-- Dark Theme for Terminal -->
+    <style name="Theme.Termux.Black" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:colorPrimary">#FF000000</item>
+        <item name="android:colorAccent">@color/accent_mauve</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+    </style>
+
+    <style name="TermuxAlertDialogStyle" parent="@android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:colorAccent">@color/accent_mauve</item>
+        <item name="android:background">@color/bg_surface</item>
+    </style>
+
+    <!-- Typography Styles -->
+    <style name="TextStyle.H1">
+        <item name="android:textSize">@dimen/font_h1</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <style name="TextStyle.H2">
+        <item name="android:textSize">@dimen/font_h2</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <style name="TextStyle.H3">
+        <item name="android:textSize">@dimen/font_h3</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <style name="TextStyle.Body">
+        <item name="android:textSize">@dimen/font_body</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+
+    <style name="TextStyle.Caption">
+        <item name="android:textSize">@dimen/font_caption</item>
+        <item name="android:textColor">@color/text_muted</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+
+    <!-- Button Styles -->
+    <style name="ButtonStyle.Primary">
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_body</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:paddingHorizontal">@dimen/button_padding_horizontal</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <style name="ButtonStyle.Secondary">
+        <item name="android:background">@drawable/bg_button_secondary</item>
+        <item name="android:textColor">@color/accent_mauve</item>
+        <item name="android:textSize">@dimen/font_body</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:paddingHorizontal">@dimen/button_padding_horizontal</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Card Styles -->
+    <style name="CardStyle">
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:padding">@dimen/card_padding</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <!-- Floating Navigation Style -->
+    <style name="FloatingNavStyle">
+        <item name="android:background">@drawable/bg_floating_nav</item>
+        <item name="android:elevation">8dp</item>
+        <item name="android:padding">@dimen/space_sm</item>
+    </style>
+
+    <!-- Modal Style -->
+    <style name="ModalStyle">
+        <item name="android:background">@drawable/bg_modal</item>
+        <item name="android:padding">@dimen/modal_padding</item>
+        <item name="android:elevation">16dp</item>
+    </style>
+
+    <!-- Input Style -->
+    <style name="InputStyle">
+        <item name="android:background">@drawable/bg_input</item>
+        <item name="android:textSize">@dimen/font_body</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_muted</item>
+        <item name="android:padding">@dimen/space_md</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+    </style>
+
+    <!-- H4 Style -->
+    <style name="TextStyle.H4">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
+
+</resources>

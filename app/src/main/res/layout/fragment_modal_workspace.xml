@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Overlay -->
+    <View
+        android:id="@+id/modal_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_dark" />
+
+    <!-- Modal Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="@drawable/bg_modal"
+        android:padding="@dimen/space_lg"
+        android:minHeight="400dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/workspace_title"
+                style="@style/TextStyle.H3" />
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_close"
+                android:tint="@color/text_secondary"
+                android:background="@drawable/bg_nav_item"
+                android:contentDescription="@string/close" />
+
+        </LinearLayout>
+
+        <!-- AI Sessions Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:text="@string/workspace_ai_sessions"
+            style="@style/TextStyle.H4" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ai_sessions_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:maxHeight="150dp" />
+
+        <!-- Terminal Sessions Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:text="@string/workspace_terminal_sessions"
+            style="@style/TextStyle.H4" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/terminal_sessions_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_sm"
+            android:maxHeight="150dp" />
+
+        <!-- Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/space_lg">
+
+            <Button
+                android:id="@+id/btn_new_session"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/space_sm"
+                android:text="@string/workspace_new_session"
+                style="@style/ButtonStyle.Primary" />
+
+            <Button
+                android:id="@+id/btn_clear_context"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/space_sm"
+                android:text="@string/workspace_clear_context"
+                style="@style/ButtonStyle.Secondary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

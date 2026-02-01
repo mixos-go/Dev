@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Overlay -->
+    <View
+        android:id="@+id/modal_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_dark" />
+
+    <!-- Modal Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="@drawable/bg_modal"
+        android:padding="@dimen/space_lg"
+        android:minHeight="400dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_arrow_back"
+                android:tint="@color/text_primary"
+                android:background="@drawable/bg_nav_item"
+                android:visibility="gone"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:id="@+id/modal_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dev_title"
+                style="@style/TextStyle.H3" />
+
+            <ImageButton
+                android:id="@+id/btn_close"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_close"
+                android:tint="@color/text_secondary"
+                android:background="@drawable/bg_nav_item"
+                android:contentDescription="@string/close" />
+
+        </LinearLayout>
+
+        <!-- Menu Container -->
+        <LinearLayout
+            android:id="@+id/menu_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/space_lg"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/menu_packages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_md"
+                android:background="@drawable/bg_list_item"
+                android:layout_marginBottom="@dimen/space_sm">
+                <ImageView
+                    android:layout_width="@dimen/icon_size_md"
+                    android:layout_height="@dimen/icon_size_md"
+                    android:src="@drawable/ic_package"
+                    android:tint="@color/accent_mauve" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/space_md"
+                    android:text="@string/dev_packages"
+                    style="@style/TextStyle.Body" />
+                <ImageView
+                    android:layout_width="@dimen/icon_size_sm"
+                    android:layout_height="@dimen/icon_size_sm"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:tint="@color/text_muted" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_runtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_md"
+                android:background="@drawable/bg_list_item"
+                android:layout_marginBottom="@dimen/space_sm">
+                <ImageView
+                    android:layout_width="@dimen/icon_size_md"
+                    android:layout_height="@dimen/icon_size_md"
+                    android:src="@drawable/ic_runtime"
+                    android:tint="@color/accent_olive" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/space_md"
+                    android:text="@string/dev_runtime"
+                    style="@style/TextStyle.Body" />
+                <ImageView
+                    android:layout_width="@dimen/icon_size_sm"
+                    android:layout_height="@dimen/icon_size_sm"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:tint="@color/text_muted" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_libraries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_md"
+                android:background="@drawable/bg_list_item"
+                android:layout_marginBottom="@dimen/space_sm">
+                <ImageView
+                    android:layout_width="@dimen/icon_size_md"
+                    android:layout_height="@dimen/icon_size_md"
+                    android:src="@drawable/ic_library"
+                    android:tint="@color/accent_terracotta" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/space_md"
+                    android:text="@string/dev_libraries"
+                    style="@style/TextStyle.Body" />
+                <ImageView
+                    android:layout_width="@dimen/icon_size_sm"
+                    android:layout_height="@dimen/icon_size_sm"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:tint="@color/text_muted" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_git"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_md"
+                android:background="@drawable/bg_list_item"
+                android:layout_marginBottom="@dimen/space_sm">
+                <ImageView
+                    android:layout_width="@dimen/icon_size_md"
+                    android:layout_height="@dimen/icon_size_md"
+                    android:src="@drawable/ic_git"
+                    android:tint="@color/accent_mint" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/space_md"
+                    android:text="@string/dev_git"
+                    style="@style/TextStyle.Body" />
+                <ImageView
+                    android:layout_width="@dimen/icon_size_sm"
+                    android:layout_height="@dimen/icon_size_sm"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:tint="@color/text_muted" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_domain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_md"
+                android:background="@drawable/bg_list_item">
+                <ImageView
+                    android:layout_width="@dimen/icon_size_md"
+                    android:layout_height="@dimen/icon_size_md"
+                    android:src="@drawable/ic_browser"
+                    android:tint="@color/state_success" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/space_md"
+                    android:text="@string/dev_domain"
+                    style="@style/TextStyle.Body" />
+                <ImageView
+                    android:layout_width="@dimen/icon_size_sm"
+                    android:layout_height="@dimen/icon_size_sm"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:tint="@color/text_muted" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- List Container (hidden by default) -->
+        <LinearLayout
+            android:id="@+id/list_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/space_md"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/list_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Packages"
+                style="@style/TextStyle.H4"
+                android:layout_marginBottom="@dimen/space_md" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/items_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
